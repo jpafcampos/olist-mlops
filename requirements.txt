@@ -3,3 +3,5 @@ uvicorn[standard]
 mlflow
 scikit-learn
 pandas
+numpy
+duckdb

@@ -6,3 +6,5 @@ mlruns/
 mlartifacts/
 mlflow-data/
 .pytest_cache/
+olist.duckdb
+data/
