@@ -6,11 +6,11 @@ import mlflow
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from olist.features import FEATURES
+
 mlflow.set_tracking_uri(os.environ.get("MLFLOW_TRACKING_URI", "sqlite:///mlflow.db"))
 MODEL_URI = "models:/olist-delay@champion"
 
-# Contrato de features: precisa casar com o FEATURES do train.py (semente do passo 3)
-FEATURES = ["promised_days", "purchase_month", "purchase_dow", "purchase_hour"]
 
 ml = {}
 

@@ -8,10 +8,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score, recall_score, average_precision_score
 
+from olist.features import FEATURES
+
 mlflow.set_tracking_uri(os.environ.get("MLFLOW_TRACKING_URI", "sqlite:///mlflow.db"))
 mlflow.set_experiment("olist-delay")
 
-FEATURES = ["promised_days", "purchase_month", "purchase_dow", "purchase_hour"]
 TARGET = "late"
 
 # 1. Lê as features reais direto do DuckDB
